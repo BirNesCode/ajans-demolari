@@ -3,127 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Hair İstanbul Saç Ekim Merkezi | Web Sitesi & 7/24 Online Randevu Ön İzlemesi</title>
+    <title>Aesthetic Hair İstanbul Saç Ekim Merkezi | Online Randevu & İşletme Yönetim Paneli Demosu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #0f172a; scroll-behavior: smooth; }</style>
 </head>
 <body>
-    <div class="bg-sky-600 text-white text-center text-xs font-bold py-2 px-4 tracking-wide">
-        🚀 DEMO ÖN İZLEME — Aesthetic Hair İstanbul Saç Ekim Merkezi İçin Özel Hazırlanmış Web Sitesi ve Online Randevu Taslağı
+    <!-- Çift Mod Geçiş Barı -->
+    <div class="sticky top-0 z-50 bg-slate-900 text-white border-b border-slate-800 px-3 py-2.5 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="text-xs font-bold text-sky-400 hidden sm:block">
+                🚀 Aesthetic Hair İstanbul Saç Ekim Merkezi • Çift Yönlü Online Randevu & Klinik/İşletme Yönetim Demosu
+            </div>
+            <div class="flex items-center gap-1.5 bg-slate-800 p-1 rounded-xl border border-slate-700 mx-auto sm:mx-0">
+                <button id="btn-mod-musteri" onclick="gorunumDegistir('musteri')" class="px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-sky-600 text-white transition">
+                    <i class="fa-solid fa-calendar-plus mr-1"></i> Müşteri Randevu Ekranı
+                </button>
+                <button id="btn-mod-isletme" onclick="gorunumDegistir('isletme')" class="px-3.5 py-1.5 rounded-lg text-xs font-extrabold text-slate-300 hover:text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-chart-pie text-sky-400"></i> İşletme Yönetim Paneli
+                    <span id="panel-rozet" class="bg-rose-500 text-white text-[10px] px-1.5 py-0.2 rounded-full">2</span>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="font-extrabold text-xl text-slate-900 flex items-center gap-2">
-                <span class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center text-sm"><i class="fa-solid fa-calendar-check"></i></span>
-                <span>Aesthetic Hair İstanbul Saç Ekim Merkezi</span>
-            </div>
-            <div class="hidden md:flex gap-6 text-sm text-slate-600 font-semibold">
-                <a href="#hakkimizda" class="hover:text-sky-600 transition">Hakkımızda</a>
-                <a href="#hizmetler" class="hover:text-sky-600 transition">Hizmetlerimiz</a>
-                <a href="#yorumlar" class="hover:text-sky-600 transition">Yorumlar</a>
-                <a href="#sss" class="hover:text-sky-600 transition">SSS</a>
-            </div>
-            <a href="#randevu" class="bg-sky-600 hover:bg-sky-700 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-xl transition shadow-md shadow-sky-600/20">
-                Online Randevu Al
-            </a>
-        </div>
-    </nav>
-
-    <section class="relative py-12 md:py-20 overflow-hidden bg-gradient-to-b from-sky-50/80 to-slate-50">
-        <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
-            <div class="lg:col-span-7">
-                <div class="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-700 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm mb-5">
-                    <span class="text-amber-500">⭐ 5,0</span> (9 Google Yorumu) • İstanbul Beşiktaş • Saç Ekimi, Estetik & Kişisel Bakım Merkezi
+    <!-- ========================================================= -->
+    <!-- GÖRÜNÜM 1: MÜŞTERİ ONLINE RANDEVU SİTESİ                  -->
+    <!-- ========================================================= -->
+    <div id="ekran-musteri">
+        <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="font-extrabold text-xl text-slate-900 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center text-sm"><i class="fa-solid fa-calendar-check"></i></span>
+                    <span>Aesthetic Hair İstanbul Saç Ekim Merkezi</span>
                 </div>
-                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                    Aesthetic Hair İstanbul Saç Ekim Merkezi ile Doğal Görünüm ve Özgüveninizi Yenileyin
-                </h1>
-                <p class="text-base text-slate-600 mt-4 leading-relaxed max-w-xl">
-                    Alanında uzman ekibimiz ve yeni nesil ağrısız uygulama teknolojilerimizle İstanbul Beşiktaş merkezimizde size özel, doğal ve kalıcı sonuçlar sunuyoruz.
-                </p>
+                <div class="hidden md:flex gap-6 text-sm text-slate-600 font-semibold">
+                    <a href="#hakkimizda" class="hover:text-sky-600 transition">Hakkımızda</a>
+                    <a href="#hizmetler" class="hover:text-sky-600 transition">Hizmetlerimiz</a>
+                    <a href="#yorumlar" class="hover:text-sky-600 transition">Yorumlar</a>
+                    <a href="#sss" class="hover:text-sky-600 transition">SSS</a>
+                </div>
+                <a href="#randevu" class="bg-sky-600 hover:bg-sky-700 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-xl transition shadow-md shadow-sky-600/20">
+                    Online Randevu Al
+                </a>
+            </div>
+        </nav>
 
-                <div class="relative mt-6 rounded-3xl overflow-hidden border border-slate-200 shadow-xl max-w-xl h-64">
+        <section class="relative py-12 md:py-20 overflow-hidden bg-gradient-to-b from-sky-50/80 to-slate-50">
+            <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-700 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm mb-5">
+                        <span class="text-amber-500">⭐ 5,0</span> (9 Google Yorumu) • İstanbul Beşiktaş • Saç Ekimi, Estetik & Kişisel Bakım Merkezi
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
+                        Aesthetic Hair İstanbul Saç Ekim Merkezi ile Doğal Görünüm ve Özgüveninizi Yenileyin
+                    </h1>
+                    <p class="text-base text-slate-600 mt-4 leading-relaxed max-w-xl">
+                        Alanında uzman ekibimiz ve yeni nesil ağrısız uygulama teknolojilerimizle İstanbul Beşiktaş merkezimizde size özel, doğal ve kalıcı sonuçlar sunuyoruz.
+                    </p>
+
+                    <div class="relative mt-6 rounded-3xl overflow-hidden border border-slate-200 shadow-xl max-w-xl h-64">
                 <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLeHO3qjEvSX0wn7xzUtSq0yVkbQwfhVaXcpEZDWwLzUO49VURpcN9vGrA2w57XXmx1d_MHVF6yWADDYN7MqXI1ZpgdrSzrlwfosUED3dNokwK2--36N14iZgXThssOYEFx3MtU=w1400-h900-k-no" alt="Aesthetic Hair İstanbul Saç Ekim Merkezi" class="w-full h-full object-cover">
                 <span class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full">
                     <i class="fa-solid fa-camera text-sky-400 mr-1"></i> Aesthetic Hair İstanbul Saç Ekim Merkezi Gerçek Klinik & Merkez Görseli
                 </span>
             </div>
-            </div>
-
-            <div id="randevu" class="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xl shadow-slate-200/80">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Hızlı Randevu Sistemi</span>
-                    <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2.5 py-0.5 rounded-full">● Müsaitlik Aktif</span>
                 </div>
-                <h2 class="text-2xl font-extrabold text-slate-900 mb-5">7/24 Online Randevu Oluştur</h2>
 
-                <form onsubmit="randevuOnayla(event)" class="space-y-3.5">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Hizmet / İşlem Seçimi</label>
-                        <select id="r-hizmet" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-medium focus:outline-none focus:border-sky-600">
-                            <option>Safir FUE & DHI Saç Ekimi</option><option>PRP & Saç Mezoterapisi</option><option>Medikal Cilt Bakımı & Gençleştirme</option><option>Ücretsiz Ön Muayene & Planlama</option>
-                        </select>
+                <div id="randevu" class="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xl shadow-slate-200/80">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Hızlı Randevu Sistemi</span>
+                        <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2.5 py-0.5 rounded-full">● Müsaitlik Aktif</span>
                     </div>
-                    <div class="grid grid-cols-2 gap-3">
+                    <h2 class="text-2xl font-extrabold text-slate-900 mb-5">7/24 Online Randevu Oluştur</h2>
+
+                    <form onsubmit="randevuOnayla(event)" class="space-y-3.5">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Tarih</label>
-                            <input type="date" id="r-tarih" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-sky-600">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Saat</label>
-                            <select id="r-saat" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-medium focus:outline-none focus:border-sky-600">
-                                <option>09:30</option><option>11:00</option><option>13:30</option><option>15:00</option><option>16:30</option><option>18:00</option>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Hizmet / İşlem Seçimi</label>
+                            <select id="r-hizmet" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-medium focus:outline-none focus:border-sky-600">
+                                <option>Safir FUE & DHI Saç Ekimi</option><option>PRP & Saç Mezoterapisi</option><option>Medikal Cilt Bakımı & Gençleştirme</option><option>Ücretsiz Ön Muayene & Planlama</option>
                             </select>
                         </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Adınız Soyadınız</label>
-                        <input type="text" id="r-ad" required placeholder="Örn: Ahmet Yılmaz" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-sky-600">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Cep Telefonunuz</label>
-                        <input type="tel" id="r-tel" required placeholder="05XX XXX XX XX" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-sky-600">
-                    </div>
-                    <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-sky-600/25 mt-2">
-                        Randevuyu Hemen Onayla
-                    </button>
-                </form>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Uzman / Personel Tercihi</label>
+                            <select id="r-uzman" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-medium focus:outline-none focus:border-sky-600">
+                                <option>Dr. / Uzm. Selin Kaya (Kıdemli Uzman)</option>
+                                <option>Dr. / Uzm. Burak Demir</option>
+                                <option>Fark Etmez (En Yakın Müsait Uzman)</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Tarih</label>
+                                <input type="date" id="r-tarih" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-sky-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Saat</label>
+                                <select id="r-saat" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-medium focus:outline-none focus:border-sky-600">
+                                    <option>09:30</option><option>11:00</option><option>13:30</option><option>15:00</option><option>16:30</option><option>18:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Adınız Soyadınız</label>
+                            <input type="text" id="r-ad" required placeholder="Örn: Ahmet Yılmaz" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-sky-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Cep Telefonunuz (GSM)</label>
+                            <input type="tel" id="r-tel" required placeholder="05XX XXX XX XX" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-sky-600">
+                        </div>
+                        <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3.5 rounded-xl transition shadow-lg shadow-sky-600/25 mt-2">
+                            Randevuyu Hemen Onayla
+                        </button>
+                    </form>
 
-                <div id="randevu-sonuc" class="hidden mt-4 bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs p-4 rounded-2xl leading-relaxed"></div>
+                    <div id="randevu-sonuc" class="hidden mt-4 bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs p-4 rounded-2xl leading-relaxed"></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="hakkimizda" class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div class="relative">
+        <section id="hakkimizda" class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+            <div class="relative">
                 <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QwSF7YK0jOk1N5HdQRM7gRyex2JZCeMT6Sm802AtB5au2yhryz64mjy3dwdxzJc8Q4j8SExpojx4xD-rSdki7hM5-5qd0QT_4gnu1arsBWv02vDF1qJOd5IVdf6OCPnRnoZEY=w1400-h900-k-no" alt="Aesthetic Hair İstanbul Saç Ekim Merkezi" class="rounded-3xl border border-slate-200 shadow-xl object-cover h-80 w-full">
                 <span class="absolute bottom-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full">
                     <i class="fa-solid fa-check-circle text-emerald-400 mr-1"></i> İşletmenizin Gerçek Fotoğrafı
                 </span>
             </div>
-        <div>
-            <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Kurumsal Standartlarımız</span>
-            <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Uzman Kadro, Steril Klinik Ortam ve Doğal Sonuçlar</h2>
-            <p class="text-slate-600 mt-4 leading-relaxed text-sm md:text-base">
-                Aesthetic Hair İstanbul Saç Ekim Merkezi olarak her danışanımıza özel detaylı analiz gerçekleştiriyor, uluslararası hijyen standartlarında ve kanıtlanmış tekniklerle maksimum memnuniyet sağlıyoruz.
-            </p>
-            <div class="mt-6 grid grid-cols-2 gap-4">
-                <div class="bg-white border border-slate-200 p-4 rounded-2xl">
-                    <div class="text-2xl font-extrabold text-sky-600">7/24</div>
-                    <div class="text-xs text-slate-500 font-medium mt-0.5">Kesintisiz Online Randevu</div>
-                </div>
-                <div class="bg-white border border-slate-200 p-4 rounded-2xl">
-                    <div class="text-2xl font-extrabold text-slate-900">%99</div>
-                    <div class="text-xs text-slate-500 font-medium mt-0.5">Danışan Memnuniyeti</div>
+            <div>
+                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Kurumsal Standartlarımız</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Uzman Kadro, Steril Klinik Ortam ve Doğal Sonuçlar</h2>
+                <p class="text-slate-600 mt-4 leading-relaxed text-sm md:text-base">
+                    Aesthetic Hair İstanbul Saç Ekim Merkezi olarak her danışanımıza özel detaylı analiz gerçekleştiriyor, uluslararası hijyen standartlarında ve kanıtlanmış tekniklerle maksimum memnuniyet sağlıyoruz.
+                </p>
+                <div class="mt-6 grid grid-cols-2 gap-4">
+                    <div class="bg-white border border-slate-200 p-4 rounded-2xl">
+                        <div class="text-2xl font-extrabold text-sky-600">7/24</div>
+                        <div class="text-xs text-slate-500 font-medium mt-0.5">Kesintisiz Online Randevu</div>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-4 rounded-2xl">
+                        <div class="text-2xl font-extrabold text-slate-900">%99</div>
+                        <div class="text-xs text-slate-500 font-medium mt-0.5">Danışan Memnuniyeti</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    
+        
             <section class="max-w-6xl mx-auto px-4 py-10">
                 <div class="flex items-center justify-between mb-6">
                     <div>
@@ -135,12 +161,12 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div class="rounded-2xl overflow-hidden border border-slate-200 h-52 shadow-sm"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLeHO3qjEvSX0wn7xzUtSq0yVkbQwfhVaXcpEZDWwLzUO49VURpcN9vGrA2w57XXmx1d_MHVF6yWADDYN7MqXI1ZpgdrSzrlwfosUED3dNokwK2--36N14iZgXThssOYEFx3MtU=w1400-h900-k-no" alt="Aesthetic Hair İstanbul Saç Ekim Merkezi" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div><div class="rounded-2xl overflow-hidden border border-slate-200 h-52 shadow-sm"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QwSF7YK0jOk1N5HdQRM7gRyex2JZCeMT6Sm802AtB5au2yhryz64mjy3dwdxzJc8Q4j8SExpojx4xD-rSdki7hM5-5qd0QT_4gnu1arsBWv02vDF1qJOd5IVdf6OCPnRnoZEY=w1400-h900-k-no" alt="Aesthetic Hair İstanbul Saç Ekim Merkezi" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div><div class="rounded-2xl overflow-hidden border border-slate-200 h-52 shadow-sm"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RjL4-XLE4EZT2syxq1N_2sS47IGhCQl0y10_QteQIkYFYj-rjoUhWxV3nFJ_TNHEbt_uZyAB2zfh6zTq3SubbPzRd6pnDk294T8hbGJjxBm55YxAdNzU2ZysxU6nRJTH21KTb6=w1400-h900-k-no" alt="Aesthetic Hair İstanbul Saç Ekim Merkezi" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div><div class="rounded-2xl overflow-hidden border border-slate-200 h-52 shadow-sm"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S0CIHaC8dcOBgXYifOfNAW6qp9IHGbb5hMHQ_OocRwDDD8aIEYpJlcovLWBiZl2mwmSKT9uFBtQpbnNJOKM9Vc0B_p2oRUeiFTovFCmlV4AiTT-HNzhNXGep0QeBUF0G2oMfVx=w1400-h900-k-no" alt="Aesthetic Hair İstanbul Saç Ekim Merkezi" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div></div>
             </section>
 
-    <section id="hizmetler" class="max-w-6xl mx-auto px-4 py-12">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Hizmet Alanlarımız</span>
-            <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Profesyonel Çözümlerimiz</h2>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6"><div class="bg-white border border-slate-200/90 hover:border-sky-500/60 rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+        <section id="hizmetler" class="max-w-6xl mx-auto px-4 py-12">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Hizmet Alanlarımız</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Profesyonel Çözümlerimiz</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6"><div class="bg-white border border-slate-200/90 hover:border-sky-500/60 rounded-3xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-xs font-bold bg-sky-50 text-sky-700 border border-sky-200/70 px-3.5 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i> Ücretsiz Analiz</span>
                     <a href="#randevu" class="text-xs font-bold text-sky-600 group-hover:translate-x-1 transition">Randevu Al →</a>
@@ -169,11 +195,11 @@
                 <h3 class="text-lg font-bold text-slate-900">Ücretsiz Ön Muayene & Planlama</h3>
                 <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">Uzmanlarımız eşliğinde kişiye özel analiz ve işlem planlaması.</p>
             </div></div>
-    </section>
+        </section>
 
-    <section id="yorumlar" class="max-w-6xl mx-auto px-4 py-12">
-        <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Danışan Yorumları</h2>
-        <div class="grid md:grid-cols-2 gap-6"><div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm">
+        <section id="yorumlar" class="max-w-6xl mx-auto px-4 py-12">
+            <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Danışan Yorumları</h2>
+            <div class="grid md:grid-cols-2 gap-6"><div class="bg-white border border-slate-200 rounded-3xl p-7 shadow-sm">
                 <div class="text-amber-400 text-sm mb-3">★★★★★</div>
                 <p class="text-sm text-slate-600 italic leading-relaxed">"İlk görüşmeden işlem sonrası takibe kadar her aşamada çok profesyonel ve ilgiliydiler. Sonuç tam istediğim gibi doğal oldu."</p>
                 <div class="mt-4 font-bold text-slate-900 text-sm">— Emre T. <span class="text-xs text-slate-400 font-normal">(Danışan Yorumu)</span></div>
@@ -182,11 +208,11 @@
                 <p class="text-sm text-slate-600 italic leading-relaxed">"Online randevu ile hiç beklemeden işleme alındım. Steril ortamı ve güler yüzlü ekibiyle güven veriyor."</p>
                 <div class="mt-4 font-bold text-slate-900 text-sm">— Zeynep M. <span class="text-xs text-slate-400 font-normal">(Danışan Yorumu)</span></div>
             </div></div>
-    </section>
+        </section>
 
-    <section id="sss" class="max-w-4xl mx-auto px-4 py-12">
-        <h2 class="text-2xl font-extrabold text-slate-900 mb-6 text-center">Sıkça Sorulan Sorular</h2>
-        <div class="space-y-3"><details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+        <section id="sss" class="max-w-4xl mx-auto px-4 py-12">
+            <h2 class="text-2xl font-extrabold text-slate-900 mb-6 text-center">Sıkça Sorulan Sorular</h2>
+            <div class="space-y-3"><details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
                 <summary class="font-bold text-slate-900 cursor-pointer flex justify-between items-center text-sm md:text-base">
                     <span>Ücretsiz ön analiz ve greft planlaması nasıl yapılıyor?</span>
                     <i class="fa-solid fa-chevron-down text-sky-600 text-xs"></i>
@@ -199,55 +225,255 @@
                 </summary>
                 <p class="text-sm text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">Uygulama sonrasında tüm yıkama, bakım ve periyodik kontrolleriniz uzman ekibimiz tarafından adım adım takip edilir.</p>
             </details></div>
-    </section>
+        </section>
 
-    <section class="max-w-6xl mx-auto px-4 mt-8">
-        <div class="bg-gradient-to-r from-sky-50 via-white to-sky-50 border border-sky-200 rounded-3xl p-6 md:p-8 shadow-sm">
-            <span class="inline-block text-xs font-bold bg-sky-100 text-sky-800 px-3 py-1 rounded-full mb-3">
-                BİLGİLENDİRME • BU BİR DEMO ÖN İZLEMESİDİR
-            </span>
-            <h3 class="text-xl md:text-2xl font-extrabold text-slate-900">Tam Sürümde İşletmenize Özel Neler Ekleniyor?</h3>
-            <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
-                Bu sayfa <strong>Aesthetic Hair İstanbul Saç Ekim Merkezi</strong> için hazırlanmış başlangıç ön izlemesidir. Tam sürüme geçtiğimizde; merkezinizin <strong>tüm mekan ve uzman fotoğrafları, kurumsal renkleriniz, güncel hizmet listeniz</strong>, Google Haritalar konum & SEO optimizasyonu ve talep edeceğiniz <strong>tüm özel modüller</strong> (çoklu dil desteği, otomatik randevu takvim yönetimi, WhatsApp bildirimleri vb.) eklenerek sıfırdan size özel yayına alınır.
-            </p>
-            <p class="text-xs text-sky-700 font-bold mt-3">
-                <i class="fa-solid fa-sparkles mr-1.5"></i> Yeni nesil bulut altyapımız sayesinde yıllık sunucu ve yenileme giderleri oluşturmadan, işletme bütçenize maksimum verim sağlayan avantajlı kurulum koşullarıyla kullanıma hazır şekilde yayına alınır.
-            </p>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-300 mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 text-sm">
-            <div>
-                <div class="font-extrabold text-lg text-white">Aesthetic Hair İstanbul Saç Ekim Merkezi</div>
-                <p class="text-slate-400 mt-2 text-xs leading-relaxed">Modern randevu altyapısı ve uzman kadromuzla hizmetinizdeyiz.</p>
+        <section class="max-w-6xl mx-auto px-4 mt-8">
+            <div class="bg-gradient-to-r from-sky-50 via-white to-sky-50 border border-sky-200 rounded-3xl p-6 md:p-8 shadow-sm">
+                <span class="inline-block text-xs font-bold bg-sky-100 text-sky-800 px-3 py-1 rounded-full mb-3">
+                    BİLGİLENDİRME • MÜŞTERİ & İŞLETME PANELİ DEMOSU
+                </span>
+                <h3 class="text-xl md:text-2xl font-extrabold text-slate-900">Tam Sürümde İşletmenize Özel Neler Ekleniyor?</h3>
+                <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+                    Üstteki <strong>"İşletme Yönetim Paneli"</strong> sekmesine geçerek danışanların oluşturduğu randevuları nasıl onaylayıp iptal edebileceğinizi, uzman performans oranlarını ve hizmet dağılım istatistiklerini canlı test edebilirsiniz. Tam sürüme geçtiğimizde; merkezinizin <strong>tüm mekan ve uzman fotoğrafları, kurumsal renkleriniz, güncel hizmet listeniz</strong> ve talep edeceğiniz <strong>tüm özel modüller</strong> eklenerek sıfırdan size özel yayına alınır.
+                </p>
+                <p class="text-xs text-sky-700 font-bold mt-3">
+                    <i class="fa-solid fa-sparkles mr-1.5"></i> Yeni nesil bulut altyapımız sayesinde yıllık sunucu ve yenileme giderleri oluşturmadan, işletme bütçenize maksimum verim sağlayan avantajlı kurulum koşullarıyla kullanıma hazır şekilde yayına alınır.
+                </p>
             </div>
-            <div>
-                <div class="font-bold text-white mb-2">Adres & İletişim</div>
-                <p class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot text-sky-400 mr-1.5"></i> 
+        </section>
+
+        <footer class="bg-slate-900 text-slate-300 mt-12">
+            <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 text-sm">
+                <div>
+                    <div class="font-extrabold text-lg text-white">Aesthetic Hair İstanbul Saç Ekim Merkezi</div>
+                    <p class="text-slate-400 mt-2 text-xs leading-relaxed">Modern randevu altyapısı ve uzman kadromuzla hizmetinizdeyiz.</p>
+                </div>
+                <div>
+                    <div class="font-bold text-white mb-2">Adres & İletişim</div>
+                    <p class="text-slate-400 text-xs"><i class="fa-solid fa-location-dot text-sky-400 mr-1.5"></i> 
 Dikilitaş, Yenidoğan Sok., 34349 Beşiktaş/İstanbul</p>
-                <p class="text-slate-400 text-xs mt-1.5"><i class="fa-solid fa-phone text-sky-400 mr-1.5"></i> 5436270185</p>
+                    <p class="text-slate-400 text-xs mt-1.5"><i class="fa-solid fa-phone text-sky-400 mr-1.5"></i> 5436270185</p>
+                </div>
+                <div>
+                    <div class="font-bold text-white mb-2">Hızlı İletişim</div>
+                    <a href="https://wa.me/905436270185" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
+                        <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Hattı
+                    </a>
+                </div>
             </div>
+        </footer>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- GÖRÜNÜM 2: İŞLETME YÖNETİM PANELİ (ADMIN DASHBOARD)        -->
+    <!-- ========================================================= -->
+    <div id="ekran-isletme" class="hidden max-w-6xl mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
             <div>
-                <div class="font-bold text-white mb-2">Hızlı İletişim</div>
-                <a href="https://wa.me/905436270185" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
-                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Hattı
-                </a>
+                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Klinik & Merkez Yönetim Sistemi</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-0.5">Aesthetic Hair İstanbul Saç Ekim Merkezi — İşletme Dashboard</h2>
+            </div>
+            <button onclick="gorunumDegistir('musteri')" class="bg-white hover:bg-slate-100 border border-slate-300 text-xs font-bold px-4 py-2.5 rounded-xl text-slate-800 transition shadow-sm">
+                ← Müşteri Randevu Ekranına Dön
+            </button>
+        </div>
+
+        <!-- KPI Kartları -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                <div class="text-xs text-slate-500 font-semibold">Toplam Randevu (Bu Ay)</div>
+                <div id="kpi-toplam" class="text-2xl font-extrabold text-slate-900 mt-1">184</div>
+                <div class="text-[11px] text-emerald-600 font-bold mt-1">↑ %31 Online Kanal Artışı</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                <div class="text-xs text-slate-500 font-semibold">Onay Bekleyen Randevu</div>
+                <div id="kpi-bekleyen" class="text-2xl font-extrabold text-sky-600 mt-1">2</div>
+                <div class="text-[11px] text-slate-400 mt-1">Tek tıkla onayla / SMS-WP ilet</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                <div class="text-xs text-slate-500 font-semibold">Kayıtlı Danışan / Müşteri</div>
+                <div class="text-2xl font-extrabold text-emerald-600 mt-1">640</div>
+                <div class="text-[11px] text-slate-400 mt-1">Düzenli takip & hatırlatma</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                <div class="text-xs text-slate-500 font-semibold">Randevu Gerçekleşme Oranı</div>
+                <div class="text-2xl font-extrabold text-indigo-600 mt-1">%94</div>
+                <div class="text-[11px] text-slate-400 mt-1">Otomatik hatırlatma aktif</div>
             </div>
         </div>
-    </footer>
+
+        <div class="grid lg:grid-cols-12 gap-6">
+            <!-- Randevu Kontrol, Onay & İptal Listesi -->
+            <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-slate-900 text-base"><i class="fa-solid fa-calendar-check text-sky-600 mr-2"></i>Canlı Randevu Kontrol & Onay</h3>
+                    <span class="text-[11px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 rounded-full font-bold">● Canlı Senkronize</span>
+                </div>
+                <div id="admin-randevu-listesi" class="space-y-3"></div>
+            </div>
+
+            <!-- Personel Performans & Hizmet Analizi -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <h3 class="font-bold text-slate-900 text-base mb-3"><i class="fa-solid fa-user-doctor text-sky-600 mr-2"></i>Uzman / Personel Performansı</h3>
+                    <div class="space-y-3 text-xs">
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-3 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-slate-900">Dr. / Uzm. Selin Kaya</div>
+                                <div class="text-slate-500 mt-0.5">68 Tamamlanan İşlem • %92 Doluluk</div>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-lg">4.98 ⭐ Puan</span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-3 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-slate-900">Dr. / Uzm. Burak Demir</div>
+                                <div class="text-slate-500 mt-0.5">54 Tamamlanan İşlem • %88 Doluluk</div>
+                            </div>
+                            <span class="bg-sky-100 text-sky-800 font-bold px-2.5 py-1 rounded-lg">4.95 ⭐ Puan</span>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-3 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-slate-900">Elif Şahin • Danışan Koordinatörü</div>
+                                <div class="text-slate-500 mt-0.5">Ort. 4 Dk Dönüş Hızı • %96 Memnuniyet</div>
+                            </div>
+                            <span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded-lg">Ayın Personeli</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+                    <h3 class="font-bold text-slate-900 text-base mb-3"><i class="fa-solid fa-chart-bar text-amber-500 mr-2"></i>Alınan Hizmet Dağılımı</h3>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-slate-700 font-medium">Safir FUE & DHI Saç Ekimi</span><span class="font-bold text-slate-900">74 İşlem (%42)</span></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-sky-600 h-2 rounded-full" style="width: 78%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-slate-700 font-medium">PRP & Saç Mezoterapisi</span><span class="font-bold text-slate-900">52 İşlem (%30)</span></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-emerald-500 h-2 rounded-full" style="width: 58%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span class="text-slate-700 font-medium">Medikal Cilt Bakımı & Gençleştirme</span><span class="font-bold text-slate-900">36 İşlem (%28)</span></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-amber-500 h-2 rounded-full" style="width: 44%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
+        const STORAGE_KEY = "birnes_panel_aesthetic_hair_istanbul_sac_ekim_merkezi_randevu";
+        const yarinTarih = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+        document.getElementById('r-tarih').value = yarinTarih;
+
+        const varsayilanRandevular = [
+            { id: 301, ad: "Kerem Aksoy", gsm: "0532 718 40 12", hizmet: "Safir FUE & DHI Saç Ekimi", uzman: "Dr. / Uzm. Selin Kaya", tarih: yarinTarih, saat: "11:00", durum: "Onay Bekliyor" },
+            { id: 302, ad: "Derya Tunç", gsm: "0544 391 22 80", hizmet: "PRP & Saç Mezoterapisi", uzman: "Dr. / Uzm. Burak Demir", tarih: yarinTarih, saat: "15:00", durum: "Onaylandı" }
+        ];
+
+        function randevulariGetir() {
+            try {
+                const kayitli = localStorage.getItem(STORAGE_KEY);
+                if (kayitli) return JSON.parse(kayitli);
+            } catch (e) {}
+            return varsayilanRandevular;
+        }
+
+        function randevulariKaydet(liste) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(liste));
+            adminPaneliCiz();
+        }
+
+        function gorunumDegistir(mod) {
+            const mEkran = document.getElementById('ekran-musteri');
+            const iEkran = document.getElementById('ekran-isletme');
+            const bMusteri = document.getElementById('btn-mod-musteri');
+            const bIsletme = document.getElementById('btn-mod-isletme');
+
+            if (mod === 'isletme') {
+                mEkran.classList.add('hidden');
+                iEkran.classList.remove('hidden');
+                bIsletme.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-sky-600 text-white transition flex items-center gap-1.5';
+                bMusteri.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold text-slate-300 hover:text-white transition';
+                adminPaneliCiz();
+            } else {
+                iEkran.classList.add('hidden');
+                mEkran.classList.remove('hidden');
+                bMusteri.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-sky-600 text-white transition';
+                bIsletme.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold text-slate-300 hover:text-white transition flex items-center gap-1.5';
+            }
+        }
+
         function randevuOnayla(e) {
             e.preventDefault();
             const ad = document.getElementById('r-ad').value;
+            const gsm = document.getElementById('r-tel').value;
             const hizmet = document.getElementById('r-hizmet').value;
+            const uzman = document.getElementById('r-uzman').value;
             const tarih = document.getElementById('r-tarih').value;
             const saat = document.getElementById('r-saat').value;
+
+            const liste = randevulariGetir();
+            liste.unshift({
+                id: Date.now(),
+                ad: ad,
+                gsm: gsm,
+                hizmet: hizmet,
+                uzman: uzman,
+                tarih: tarih,
+                saat: saat,
+                durum: "Onay Bekliyor"
+            });
+            randevulariKaydet(liste);
+
             const kutu = document.getElementById('randevu-sonuc');
             kutu.classList.remove('hidden');
-            kutu.innerHTML = `✅ <strong>Sayın ${ad}</strong>, <strong>${tarih}</strong> günü saat <strong>${saat}</strong> için <em>${hizmet}</em> randevunuz başarıyla oluşturuldu!`;
+            kutu.innerHTML = `✅ <strong>Sayın ${ad}</strong> (${gsm}), <strong>${tarih}</strong> günü saat <strong>${saat}</strong> için <em>${hizmet}</em> randevunuz işletme yönetim paneline aktarıldı! <br><button onclick="gorunumDegistir('isletme')" class="mt-2 inline-block bg-sky-600 text-white font-bold px-3 py-1.5 rounded-lg">İşletme Panelinde Gör & Onayla →</button>`;
         }
+
+        function randevuDurumDegistir(id, yeniDurum) {
+            const liste = randevulariGetir().map(r => r.id === id ? { ...r, durum: yeniDurum } : r);
+            randevulariKaydet(liste);
+        }
+
+        function adminPaneliCiz() {
+            const liste = randevulariGetir();
+            const bekleyen = liste.filter(r => r.durum === 'Onay Bekliyor').length;
+            document.getElementById('panel-rozet').textContent = bekleyen;
+            document.getElementById('kpi-bekleyen').textContent = bekleyen;
+            document.getElementById('kpi-toplam').textContent = 182 + liste.length;
+
+            document.getElementById('admin-randevu-listesi').innerHTML = liste.map(r => {
+                let rozet = 'bg-amber-50 text-amber-800 border-amber-200';
+                if (r.durum === 'Onaylandı') rozet = 'bg-emerald-50 text-emerald-800 border-emerald-200';
+                if (r.durum === 'Tamamlandı') rozet = 'bg-sky-50 text-sky-800 border-sky-200';
+                if (r.durum === 'İptal Edildi') rozet = 'bg-rose-50 text-rose-800 border-rose-200';
+
+                const temizGsm = String(r.gsm).replace(/\D/g, '');
+                const wpLink = temizGsm ? `https://wa.me/90${temizGsm.replace(/^0/, '')}?text=${encodeURIComponent('Sayın ' + r.ad + ', ' + r.tarih + ' saat ' + r.saat + ' tarihli ' + r.hizmet + ' randevunuz onaylanmıştır.')}` : '#';
+
+                return `
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="font-extrabold text-slate-900 text-sm">${r.ad}</span>
+                            <span class="text-xs text-sky-700 font-bold"><i class="fa-solid fa-phone mr-1"></i>${r.gsm}</span>
+                            <span class="text-[11px] font-bold border px-2 py-0.5 rounded-full ${rozet}">${r.durum}</span>
+                        </div>
+                        <div class="text-xs text-slate-700 font-medium mt-1">${r.hizmet} • <span class="text-slate-500">${r.uzman}</span></div>
+                        <div class="text-[11px] text-slate-500 mt-0.5"><i class="fa-regular fa-clock mr-1"></i>${r.tarih} • <strong>${r.saat}</strong></div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 shrink-0">
+                        <button onclick="randevuDurumDegistir(${r.id}, 'Onaylandı')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition">Onayla</button>
+                        <button onclick="randevuDurumDegistir(${r.id}, 'Tamamlandı')" class="bg-sky-600 hover:bg-sky-500 text-white text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition">Tamamlandı</button>
+                        <button onclick="randevuDurumDegistir(${r.id}, 'İptal Edildi')" class="bg-rose-600/15 hover:bg-rose-600 text-rose-700 hover:text-white border border-rose-300 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition">İptal</button>
+                        <a href="${wpLink}" target="_blank" class="bg-emerald-100 hover:bg-emerald-200 text-emerald-800 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition" title="Müşteriye WhatsApp Onayı Gönder"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+        adminPaneliCiz();
     </script>
 </body>
 </html>
