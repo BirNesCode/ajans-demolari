@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>The pilates lab studio | Kurumsal Web Sitesi & Takvimli İşletme Yönetim Paneli</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #09090b; color: #f4f4f5; scroll-behavior: smooth; }
+        @media print {
+            body { background: #fff !important; color: #000 !important; }
+            .no-print { display: none !important; }
+            .print-area { display: block !important; background: #fff !important; color: #000 !important; }
+            .print-card { border: 1px solid #cbd5e1 !important; background: #fff !important; color: #000 !important; }
+            .print-text-dark { color: #0f172a !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print sticky top-0 z-50 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 px-3 py-2.5">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="text-xs font-bold text-emerald-400 hidden sm:block">
+                ✨ The pilates lab studio • Çift Yönlü Kurumsal Web & Takvimli Yönetim Demosu
+            </div>
+            <div class="flex items-center gap-1.5 bg-zinc-900 p-1 rounded-xl border border-zinc-800 mx-auto sm:mx-0">
+                <button id="btn-mod-musteri" onclick="gorunumDegistir('musteri')" class="px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-emerald-500 text-zinc-950 transition">
+                    <i class="fa-solid fa-globe mr-1"></i> Müşteri Web Sitesi
+                </button>
+                <button id="btn-mod-isletme" onclick="gorunumDegistir('isletme')" class="px-3.5 py-1.5 rounded-lg text-xs font-extrabold text-zinc-300 hover:text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-calendar-days text-emerald-400"></i> İşletme Takvim & Yönetim Paneli
+                    <span id="panel-rozet" class="bg-rose-500 text-white text-[10px] px-1.5 py-0.2 rounded-full">4</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ekran-musteri" class="no-print">
+        <nav class="bg-zinc-950/85 border-b border-zinc-800/80">
+            <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span> The pilates lab studio
+                </div>
+                <div class="hidden md:flex gap-6 text-sm text-zinc-400 font-medium">
+                    <a href="#hakkimizda" class="hover:text-white transition">Hakkımızda</a>
+                    <a href="#hizmetler" class="hover:text-white transition">Hizmetlerimiz</a>
+                    <a href="#talep-formu" class="hover:text-white transition">Randevu & Talep</a>
+                    <a href="#sss" class="hover:text-white transition">SSS</a>
+                </div>
+                <a href="#talep-formu" class="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-xs md:text-sm font-bold px-4 py-2.5 rounded-xl transition">
+                    Hızlı Bilgi & Randevu
+                </a>
+            </div>
+        </nav>
+
+        <section class="relative py-16 md:py-24 overflow-hidden bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-950/40 via-zinc-950 to-zinc-950">
+            <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-full mb-5">
+                        ⭐ Google'da 5,0 Puan (113 Yorum) • Antalya Konyaaltı • Modern Pilates, Fitness & Sağlıklı Yaşam Stüdyosu
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                        The pilates lab studio ile Gücünü, Dengeni ve Enerjini Keşfet
+                    </h1>
+                    <p class="text-base md:text-lg text-zinc-300 mt-5 leading-relaxed">
+                        Uzman eğitmen kadromuz, son teknoloji ekipmanlarımız ve kişiye özel antrenman programlarımızla Antalya Konyaaltı merkezimizde hayalinizdeki forma ulaşın.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#talep-formu" class="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold px-6 py-3.5 rounded-xl transition shadow-lg shadow-emerald-500/20">
+                            Hemen Randevu / Talep Oluştur
+                        </a>
+                        <a href="https://wa.me/905068488504" target="_blank" class="bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 font-bold px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i> WhatsApp Hattı
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                <div class="rounded-3xl overflow-hidden border border-zinc-700/80 shadow-2xl h-80 md:h-96">
+                    <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLd1VjCg_Ivkhqi3sv-3RhMza9mSTzj7a-x8ZL0pSQ2iXP-wOZ8XEjFnqUk3xsPJ_w7st1cQt6qx2QYbeRy8cfXn82yJKXDQ2H6RRTNO8dLVA0jFch3JHixAnlbozhRAhXXQYvXl=w1400-h900-k-no" alt="The pilates lab studio" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 left-4 right-4 bg-zinc-900/95 backdrop-blur-md border border-emerald-500/40 rounded-2xl p-4 flex items-center justify-between shadow-xl">
+                    <div>
+                        <div class="text-xs font-bold text-emerald-400"><i class="fa-solid fa-camera mr-1"></i> The pilates lab studio Gerçek Mekan Görseli</div>
+                        <div class="text-xs text-zinc-300 mt-0.5">
+Gez apartmanı, Gürsu, 306. Sk. no 5, 07050 Konyaaltı/Antalya</div>
+                    </div>
+                    <span class="bg-emerald-500 text-zinc-950 text-xs font-extrabold px-3 py-1.5 rounded-xl">⭐ 5,0</span>
+                </div>
+            </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hakkimizda" class="max-w-6xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+            <div class="relative">
+                <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLedRiYPj6iGdbi_7SkPCnrF3oazHeBM0ebT43D1sbB9txbG8stuiRT-w7YSeyQhohm9YYiN8e8HjXlElm-mUF9XJrfkOvV-_FSqo2RX08GUAsBODXE6M1osTAJRf51JGDRcepPN=w1400-h900-k-no" alt="The pilates lab studio" class="rounded-3xl border border-zinc-800 shadow-2xl object-cover h-80 w-full">
+                <span class="absolute bottom-3 left-3 bg-black/75 backdrop-blur-md text-zinc-200 text-[11px] font-medium px-3 py-1 rounded-full border border-zinc-700">
+                    <i class="fa-solid fa-check-circle text-emerald-400 mr-1"></i> İşletmenizin Gerçek Fotoğrafı
+                </span>
+            </div>
+            <div>
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Kurumsal Yaklaşımımız</span>
+                <h2 class="text-3xl font-extrabold text-white mt-2">Antalya Konyaaltı Bölgesinin En Dinamik Antrenman Stüdyosu</h2>
+                <p class="text-zinc-300 mt-4 leading-relaxed text-sm md:text-base">
+                    The pilates lab studio olarak her seviyeden üyemize ferah, hijyenik ve motivasyonu yüksek bir spor deneyimi sunuyoruz. İlk gün yapılan vücut analizi ve postür değerlendirmesiyle gelişiminizi birebir takip ediyoruz.
+                </p>
+                <div class="mt-6 space-y-2.5 text-sm text-zinc-300">
+                    <div><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> İhtiyaçlarınıza özel profesyonel planlama</div>
+                    <div><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> Şeffaf iletişim ve güvenilir danışmanlık</div>
+                    <div><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> Merkezi konum ve hızlı erişim imkanı</div>
+                </div>
+            </div>
+        </section>
+
+        
+            <section class="max-w-6xl mx-auto px-4 py-10">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">İşletmenizden Kareler</span>
+                        <h2 class="text-2xl font-extrabold text-white mt-1">Gerçek Mekan & Hizmet Galerisi</h2>
+                    </div>
+                    <span class="text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full">İşletmenize Ait Gerçek Görseller</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div class="rounded-2xl overflow-hidden border border-zinc-800 h-56 shadow-lg"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLd1VjCg_Ivkhqi3sv-3RhMza9mSTzj7a-x8ZL0pSQ2iXP-wOZ8XEjFnqUk3xsPJ_w7st1cQt6qx2QYbeRy8cfXn82yJKXDQ2H6RRTNO8dLVA0jFch3JHixAnlbozhRAhXXQYvXl=w1400-h900-k-no" alt="The pilates lab studio" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div><div class="rounded-2xl overflow-hidden border border-zinc-800 h-56 shadow-lg"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLedRiYPj6iGdbi_7SkPCnrF3oazHeBM0ebT43D1sbB9txbG8stuiRT-w7YSeyQhohm9YYiN8e8HjXlElm-mUF9XJrfkOvV-_FSqo2RX08GUAsBODXE6M1osTAJRf51JGDRcepPN=w1400-h900-k-no" alt="The pilates lab studio" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div></div>
+            </section>
+        
+            <section class="max-w-6xl mx-auto px-4 py-12">
+                <div class="bg-gradient-to-br from-zinc-900 via-zinc-900 to-emerald-950/30 border border-emerald-500/30 rounded-3xl p-7 md:p-10 shadow-2xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider"><i class="fa-solid fa-bolt mr-1"></i> Canlı Stüdyo Programı</span>
+                            <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">Bugünün Seans & Grup Ders Saatleri</h2>
+                        </div>
+                        <a href="#talep-formu" class="bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs px-5 py-3 rounded-xl transition">
+                            Ücretsiz Deneme Seansı Ayırt
+                        </a>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-zinc-950/90 border border-zinc-800 rounded-2xl p-4">
+                            <div class="text-xs font-bold text-emerald-400">09:30 – 10:20</div>
+                            <div class="font-bold text-white mt-1">Sabah Reformer & Esneklik</div>
+                            <div class="text-[11px] text-emerald-400 mt-2">● 2 Kontenjan Müsait</div>
+                        </div>
+                        <div class="bg-zinc-950/90 border border-zinc-800 rounded-2xl p-4">
+                            <div class="text-xs font-bold text-emerald-400">12:30 – 13:20</div>
+                            <div class="font-bold text-white mt-1">Core & Postür Güçlendirme</div>
+                            <div class="text-[11px] text-emerald-400 mt-2">● 3 Kontenjan Müsait</div>
+                        </div>
+                        <div class="bg-zinc-950/90 border border-zinc-800 rounded-2xl p-4">
+                            <div class="text-xs font-bold text-emerald-400">17:30 – 18:20</div>
+                            <div class="font-bold text-white mt-1">Sıkılaşma & Kondisyon</div>
+                            <div class="text-[11px] text-amber-400 mt-2">● Son 1 Kontenjan</div>
+                        </div>
+                        <div class="bg-zinc-950/90 border border-zinc-800 rounded-2xl p-4">
+                            <div class="text-xs font-bold text-emerald-400">19:00 – 19:50</div>
+                            <div class="font-bold text-white mt-1">Akşam Mobilite & Denge</div>
+                            <div class="text-[11px] text-emerald-400 mt-2">● 2 Kontenjan Müsait</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <section id="hizmetler" class="max-w-6xl mx-auto px-4 py-12">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Hizmet Alanlarımız</span>
+                <h2 class="text-3xl font-extrabold text-white mt-2">Size En Uygun Çözümü Seçin</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6"><div class="bg-zinc-900/90 border border-zinc-800 hover:border-emerald-500/60 rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 group shadow-xl">
+                <div class="flex justify-between items-center mb-5">
+                    <span class="inline-block text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-3.5 py-1 rounded-full">Duruş & Esneklik</span>
+                    <a href="#talep-formu" class="w-9 h-9 rounded-full bg-zinc-800 group-hover:bg-emerald-500 group-hover:text-zinc-950 flex items-center justify-center text-xs transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Reformer & Tower Pilates</h3>
+                <p class="text-sm text-zinc-400 mt-3 leading-relaxed">Omurga sağlığını güçlendiren, sıkılaşma ve esneklik kazandıran özel ekipmanlı stüdyo seansları.</p>
+            </div><div class="bg-zinc-900/90 border border-zinc-800 hover:border-emerald-500/60 rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 group shadow-xl">
+                <div class="flex justify-between items-center mb-5">
+                    <span class="inline-block text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-3.5 py-1 rounded-full">Kişiye Özel Koçluk</span>
+                    <a href="#talep-formu" class="w-9 h-9 rounded-full bg-zinc-800 group-hover:bg-emerald-500 group-hover:text-zinc-950 flex items-center justify-center text-xs transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Birebir Personal Training</h3>
+                <p class="text-sm text-zinc-400 mt-3 leading-relaxed">Vücut yapınıza ve hedeflerinize özel hazırlanan antrenman ve beslenme takibiyle hızlı sonuç.</p>
+            </div><div class="bg-zinc-900/90 border border-zinc-800 hover:border-emerald-500/60 rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 group shadow-xl">
+                <div class="flex justify-between items-center mb-5">
+                    <span class="inline-block text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-3.5 py-1 rounded-full">Yüksek Kalori Yakımı</span>
+                    <a href="#talep-formu" class="w-9 h-9 rounded-full bg-zinc-800 group-hover:bg-emerald-500 group-hover:text-zinc-950 flex items-center justify-center text-xs transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Fonksiyonel Fitness & Kondisyon</h3>
+                <p class="text-sm text-zinc-400 mt-3 leading-relaxed">Dayanıklılık, güç ve kardiyovasküler kapasiteyi artıran dinamik stüdyo antrenmanları.</p>
+            </div><div class="bg-zinc-900/90 border border-zinc-800 hover:border-emerald-500/60 rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 group shadow-xl">
+                <div class="flex justify-between items-center mb-5">
+                    <span class="inline-block text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-3.5 py-1 rounded-full">Başlangıç Paketi</span>
+                    <a href="#talep-formu" class="w-9 h-9 rounded-full bg-zinc-800 group-hover:bg-emerald-500 group-hover:text-zinc-950 flex items-center justify-center text-xs transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Ücretsiz Postür & Vücut Analizi</h3>
+                <p class="text-sm text-zinc-400 mt-3 leading-relaxed">Size en uygun ders programını belirlemek için uzman eğitmenlerimizle ücretsiz ön değerlendirme.</p>
+            </div></div>
+        </section>
+
+        <section id="talep-formu" class="max-w-4xl mx-auto px-4 py-12">
+            <div class="bg-zinc-900 border border-emerald-500/40 rounded-3xl p-7 md:p-10 shadow-2xl">
+                <div class="text-center mb-6">
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Doğrudan İşletme Takvimine İletilir</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">Ücretsiz Deneme Seansı & Üyelik Randevu Formu</h2>
+                </div>
+                <form onsubmit="talepGonder(event)" class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Adınız Soyadınız</label>
+                        <input type="text" id="t-ad" required placeholder="Örn: Ahmet Yılmaz" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Cep Telefonunuz (GSM)</label>
+                        <input type="tel" id="t-gsm" required placeholder="05XX XXX XX XX" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Hizmet / Konu</label>
+                        <select id="t-konu" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                            <option>Reformer & Tower Pilates</option><option>Birebir Personal Training</option><option>Fonksiyonel Fitness & Kondisyon</option><option>Ücretsiz Postür & Vücut Analizi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Uzman / Danışman Seçimi</label>
+                        <select id="t-personel" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                            <option>Buse Arslan</option><option>Kerem Aydın</option><option>Deniz Yılmaz</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Tarih</label>
+                        <input type="date" id="t-tarih" required class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Saat</label>
+                        <select id="t-saat" class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                            <option>09:30</option><option>11:00</option><option>13:30</option><option>15:00</option><option>16:30</option><option>18:00</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2 pt-2">
+                        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-extrabold py-3.5 rounded-xl transition shadow-lg shadow-emerald-500/20">
+                            Seans Randevusu Oluştur
+                        </button>
+                    </div>
+                </form>
+                <div id="talep-sonuc" class="hidden mt-4 bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 text-xs p-4 rounded-2xl"></div>
+            </div>
+        </section>
+
+        <!-- KODLAYAN_AJAN_OZEL_BOLUM -->
+
+        
+
+        <section id="sss" class="max-w-4xl mx-auto px-4 py-12">
+            <h2 class="text-2xl font-extrabold text-white mb-6 text-center">Sıkça Sorulan Sorular</h2>
+            <div class="space-y-3"><details class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5 group">
+                <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm md:text-base">
+                    <span>Deneme dersi ve üyelik paketleri hakkında nasıl bilgi alabilirim?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-400 text-xs"></i>
+                </summary>
+                <p class="text-sm text-zinc-400 mt-3 leading-relaxed border-t border-zinc-800 pt-3">Sayfamızdaki online talep formundan tek tıkla deneme seansı planlayabilir ve avantajlı paketlerimizi öğrenebilirsiniz.</p>
+            </details><details class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5 group">
+                <summary class="font-bold text-white cursor-pointer flex justify-between items-center text-sm md:text-base">
+                    <span>Daha önce hiç pilates veya fitness yapmadım, katılabilir miyim?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-400 text-xs"></i>
+                </summary>
+                <p class="text-sm text-zinc-400 mt-3 leading-relaxed border-t border-zinc-800 pt-3">Elbette. Eğitmenlerimiz ilk gün yaptıkları postür analiziyle seviyenize en uygun başlangıç programını oluşturur.</p>
+            </details></div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 mt-8">
+            <div class="bg-gradient-to-r from-zinc-900 via-zinc-900 to-emerald-950/30 border border-emerald-500/30 rounded-3xl p-6 md:p-8">
+                <span class="inline-block text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full mb-3">
+                    BİLGİLENDİRME • MÜŞTERİ & İŞLETME TAKVİM PANELİ DEMOSU
+                </span>
+                <h3 class="text-xl md:text-2xl font-extrabold text-white">Tam Sürümde İşletmenize Özel Neler Tasarlıyoruz?</h3>
+                <p class="text-sm text-zinc-300 mt-2.5 leading-relaxed">
+                    Üstteki <strong>"İşletme Takvim & Yönetim Paneli"</strong> sekmesine geçerek gün bazlı aylık takvimi, tıklanan günün saat bazlı randevu çizelgesini, personel bazlı filtrelemeyi ve tek tıkla yazıcı çıktısı alma özelliğini canlı test edebilirsiniz. Tam sürüme geçtiğimizde; işletmenizin <strong>tüm mekan ve ekip fotoğrafları, kurumsal renk paletiniz, güncel hizmet detaylarınız</strong> ve talep edeceğiniz <strong>tüm özel modüller</strong> eklenerek sıfırdan size özel yayına alınır.
+                </p>
+                <p class="text-xs text-emerald-400 font-semibold mt-3">
+                    <i class="fa-solid fa-sparkles mr-1.5"></i> Yeni nesil bulut mimarimiz sayesinde yıllık barındırma ve yenileme maliyetleri oluşturmadan, işletme bütçenize maksimum verim sağlayan avantajlı kurulum koşullarıyla kullanıma hazır şekilde yayına alınır.
+                </p>
+            </div>
+        </section>
+
+        <footer class="bg-zinc-900/80 border-t border-zinc-800 mt-12">
+            <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 text-sm">
+                <div>
+                    <div class="font-extrabold text-lg text-white">The pilates lab studio</div>
+                    <p class="text-zinc-400 mt-2 text-xs leading-relaxed">Profesyonel hizmet anlayışı ve kurumsal altyapımızla yanınızdayız.</p>
+                </div>
+                <div>
+                    <div class="font-bold text-white mb-2">İletişim & Adres</div>
+                    <p class="text-zinc-400 text-xs"><i class="fa-solid fa-location-dot text-emerald-400 mr-1.5"></i> 
+Gez apartmanı, Gürsu, 306. Sk. no 5, 07050 Konyaaltı/Antalya</p>
+                    <p class="text-zinc-400 text-xs mt-1.5"><i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> 5068488504</p>
+                </div>
+                <div>
+                    <div class="font-bold text-white mb-2">Çalışma Saatleri</div>
+                    <p class="text-zinc-400 text-xs">Pazartesi - Cumartesi: 09:00 – 20:00</p>
+                    <p class="text-zinc-400 text-xs mt-1">Pazar: Randevulu Görüşme</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="ekran-isletme" class="print-area hidden max-w-6xl mx-auto px-4 py-8">
+        <div class="no-print flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+            <div>
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Gün & Personel Bazlı Randevu Takvimi</span>
+                <h2 class="print-text-dark text-2xl md:text-3xl font-extrabold text-white mt-0.5">The pilates lab studio — İşletme Yönetim Paneli</h2>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="cizelgeYazdir()" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center gap-1.5 shadow-lg">
+                    <i class="fa-solid fa-print"></i> Seçili Çizelgeyi Yazdır / PDF
+                </button>
+                <button onclick="gorunumDegistir('musteri')" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs font-bold px-4 py-2.5 rounded-xl text-zinc-200 transition">
+                    ← Müşteri Sitesine Dön
+                </button>
+            </div>
+        </div>
+
+        <div class="no-print bg-zinc-900 border border-zinc-800 rounded-2xl p-4 mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold text-zinc-400 mr-1"><i class="fa-solid fa-user-check text-emerald-400 mr-1"></i> Personel Bazlı Takvim:</span>
+                <button onclick="personelFiltreSec('Tümü')" id="pbtn-Tümü" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-emerald-500 text-zinc-950 transition">Tüm Ekip</button>
+                <button onclick="personelFiltreSec('Buse Arslan')" id="pbtn-Buse Arslan" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-zinc-950 text-zinc-300 border border-zinc-800 hover:border-emerald-500/50 transition">Buse Arslan</button><button onclick="personelFiltreSec('Kerem Aydın')" id="pbtn-Kerem Aydın" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-zinc-950 text-zinc-300 border border-zinc-800 hover:border-emerald-500/50 transition">Kerem Aydın</button><button onclick="personelFiltreSec('Deniz Yılmaz')" id="pbtn-Deniz Yılmaz" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-zinc-950 text-zinc-300 border border-zinc-800 hover:border-emerald-500/50 transition">Deniz Yılmaz</button>
+            </div>
+            <div id="personel-ozet-rozet" class="text-xs text-emerald-400 font-bold">Tüm Ekip Programı Gösteriliyor</div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-6 mb-6">
+            <div class="no-print lg:col-span-5 bg-zinc-900 border border-zinc-800 rounded-3xl p-5 shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <button onclick="ayDegistir(-1)" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 flex items-center justify-center"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                    <h3 id="takvim-ay-baslik" class="font-extrabold text-white text-base">Kasım 2026</h3>
+                    <button onclick="ayDegistir(1)" class="w-8 h-8 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 flex items-center justify-center"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center text-[11px] font-bold text-zinc-500 mb-2">
+                    <div>Pzt</div><div>Sal</div><div>Çar</div><div>Per</div><div>Cum</div><div>Cmt</div><div>Paz</div>
+                </div>
+                <div id="takvim-gunler" class="grid grid-cols-7 gap-1.5"></div>
+                <div class="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between text-[11px] text-zinc-400">
+                    <span><span class="inline-block w-2 h-2 rounded-full bg-emerald-400 mr-1"></span>Onaylı Randevu</span>
+                    <span><span class="inline-block w-2 h-2 rounded-full bg-amber-400 mr-1"></span>Onay Bekleyen</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 print-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 shadow-xl">
+                <div class="flex flex-wrap justify-between items-center gap-2 pb-3 mb-4 border-b border-zinc-800">
+                    <div>
+                        <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Saat Bazlı Günlük Akış</span>
+                        <h3 id="secili-gun-baslik" class="print-text-dark text-lg font-extrabold text-white mt-0.5">Seçili Gün Programı</h3>
+                    </div>
+                    <span id="gunluk-sayi-rozet" class="text-xs font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full">0 Kayıt</span>
+                </div>
+                <div id="saat-bazli-akisi" class="space-y-2.5"></div>
+            </div>
+        </div>
+
+        <div class="no-print grid lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-7 bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5">
+                <h3 class="font-bold text-white text-base mb-4"><i class="fa-solid fa-list-check text-emerald-400 mr-2"></i>Tüm Randevular & Hızlı Onay / İptal</h3>
+                <div id="admin-talep-listesi" class="space-y-3"></div>
+            </div>
+            <div class="lg:col-span-5 bg-zinc-900/90 border border-zinc-800 rounded-2xl p-5">
+                <h3 class="font-bold text-white text-base mb-3"><i class="fa-solid fa-user-tie text-emerald-400 mr-2"></i>Ekip & Uzman Performansı</h3>
+                <div class="space-y-3 text-xs">
+                <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-3 flex justify-between items-center">
+                    <div><div class="font-bold text-white">Buse Arslan • Baş Pilates Eğitmeni</div><div class="text-zinc-400 mt-0.5">36 Haftalık Seans • %94 Doluluk Oranı</div></div>
+                    <span class="bg-emerald-500/15 text-emerald-400 font-bold px-2.5 py-1 rounded-lg">4.98 ⭐</span>
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-3 flex justify-between items-center">
+                    <div><div class="font-bold text-white">Kerem Aydın • Personal Trainer</div><div class="text-zinc-400 mt-0.5">29 Birebir Ders • 22 Aktif Üye Takibi</div></div>
+                    <span class="bg-sky-500/15 text-sky-400 font-bold px-2.5 py-1 rounded-lg">%96 Devam</span>
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-3 flex justify-between items-center">
+                    <div><div class="font-bold text-white">Deniz Yılmaz • Fonksiyonel & Postür Uzmanı</div><div class="text-zinc-400 mt-0.5">24 Grup & Özel Seans • %92 Memnuniyet</div></div>
+                    <span class="bg-amber-500/15 text-amber-400 font-bold px-2.5 py-1 rounded-lg">4.95 ⭐</span>
+                </div></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const STORAGE_KEY = "birnes_panel_the_pilates_lab_studio_v4_kurumsal";
+        const personellerListesi = ["Buse Arslan", "Kerem Aydın", "Deniz Yılmaz"];
+        const bugunStr = new Date().toISOString().split('T')[0];
+        const yarinStr = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+        const ikiGunSonraStr = new Date(Date.now() + 2 * 86400000).toISOString().split('T')[0];
+        const dortGunSonraStr = new Date(Date.now() + 4 * 86400000).toISOString().split('T')[0];
+        document.getElementById('t-tarih').value = yarinStr;
+
+        let gosterilenYil = new Date().getFullYear();
+        let gosterilenAy = new Date().getMonth();
+        let seciliTarih = yarinStr;
+        let seciliPersonel = "Tümü";
+
+        const p0 = personellerListesi[0];
+        const p1 = personellerListesi[1] || p0;
+        const p2 = personellerListesi[2] || p0;
+
+        const varsayilanTalepler = [
+            { id: 201, ad: "Murat Karahan", gsm: "0532 410 88 21", konu: "Reformer & Tower Pilates", personel: p0, tarih: yarinStr, saat: "09:30", durum: "Onaylandı" },
+            { id: 202, ad: "Selin Özdemir", gsm: "0541 290 14 55", konu: "Birebir Personal Training", personel: p1, tarih: yarinStr, saat: "11:00", durum: "Bekliyor" },
+            { id: 203, ad: "Burak Çelik", gsm: "0533 612 74 09", konu: "Fonksiyonel Fitness & Kondisyon", personel: p2, tarih: yarinStr, saat: "13:30", durum: "Onaylandı" },
+            { id: 204, ad: "Gizem Akın", gsm: "0555 841 20 33", konu: "Ücretsiz Postür & Vücut Analizi", personel: p0, tarih: yarinStr, saat: "15:00", durum: "Bekliyor" },
+            { id: 205, ad: "Tolga Demirtaş", gsm: "0530 918 44 12", konu: "Reformer & Tower Pilates", personel: p1, tarih: yarinStr, saat: "18:00", durum: "Onaylandı" },
+            { id: 206, ad: "Emre Aydın", gsm: "0505 332 19 88", konu: "Reformer & Tower Pilates", personel: p0, tarih: bugunStr, saat: "11:00", durum: "Onaylandı" },
+            { id: 207, ad: "Zeynep Kılıç", gsm: "0542 776 31 40", konu: "Birebir Personal Training", personel: p1, tarih: bugunStr, saat: "13:30", durum: "Onaylandı" },
+            { id: 208, ad: "Canan Yıldırım", gsm: "0536 509 82 61", konu: "Fonksiyonel Fitness & Kondisyon", personel: p2, tarih: bugunStr, saat: "16:30", durum: "Bekliyor" },
+            { id: 209, ad: "Okan Şen", gsm: "0531 445 90 17", konu: "Ücretsiz Postür & Vücut Analizi", personel: p0, tarih: ikiGunSonraStr, saat: "11:00", durum: "Bekliyor" },
+            { id: 210, ad: "Meltem Arslan", gsm: "0545 213 67 84", konu: "Birebir Personal Training", personel: p2, tarih: ikiGunSonraStr, saat: "15:00", durum: "Onaylandı" },
+            { id: 211, ad: "Serkan Öztürk", gsm: "0532 889 12 45", konu: "Reformer & Tower Pilates", personel: p1, tarih: dortGunSonraStr, saat: "13:30", durum: "Onaylandı" }
+        ];
+
+        function talepleriGetir() {
+            try {
+                const kayitli = localStorage.getItem(STORAGE_KEY);
+                if (kayitli) return JSON.parse(kayitli);
+            } catch (e) {}
+            return varsayilanTalepler;
+        }
+
+        function talepleriKaydet(liste) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(liste));
+            tumAdminBilesenleriniCiz();
+        }
+
+        function gorunumDegistir(mod) {
+            const mEkran = document.getElementById('ekran-musteri');
+            const iEkran = document.getElementById('ekran-isletme');
+            const bMusteri = document.getElementById('btn-mod-musteri');
+            const bIsletme = document.getElementById('btn-mod-isletme');
+
+            if (mod === 'isletme') {
+                mEkran.classList.add('hidden');
+                iEkran.classList.remove('hidden');
+                bIsletme.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-emerald-500 text-zinc-950 transition flex items-center gap-1.5';
+                bMusteri.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold text-zinc-300 hover:text-white transition';
+                tumAdminBilesenleriniCiz();
+            } else {
+                iEkran.classList.add('hidden');
+                mEkran.classList.remove('hidden');
+                bMusteri.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold bg-emerald-500 text-zinc-950 transition';
+                bIsletme.className = 'px-3.5 py-1.5 rounded-lg text-xs font-extrabold text-zinc-300 hover:text-white transition flex items-center gap-1.5';
+            }
+        }
+
+        function personelFiltreSec(p) {
+            seciliPersonel = p;
+            ['Tümü', ...personellerListesi].forEach(isim => {
+                const btn = document.getElementById('pbtn-' + isim);
+                if (btn) {
+                    btn.className = isim === p
+                        ? 'px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-emerald-500 text-zinc-950 transition'
+                        : 'px-3.5 py-1.5 rounded-xl text-xs font-bold bg-zinc-950 text-zinc-300 border border-zinc-800 hover:border-emerald-500/50 transition';
+                }
+            });
+            document.getElementById('personel-ozet-rozet').textContent = p === 'Tümü' ? 'Tüm Ekip Programı Gösteriliyor' : `Seçili Personel: ${p}`;
+            tumAdminBilesenleriniCiz();
+        }
+
+        function ayDegistir(yon) {
+            gosterilenAy += yon;
+            if (gosterilenAy < 0) { gosterilenAy = 11; gosterilenYil--; }
+            if (gosterilenAy > 11) { gosterilenAy = 0; gosterilenYil++; }
+            takvimiCiz();
+        }
+
+        function gunSec(tarihStr) {
+            seciliTarih = tarihStr;
+            takvimiCiz();
+            saatBazliAkisiCiz();
+        }
+
+        function cizelgeYazdir() {
+            window.print();
+        }
+
+        function takvimiCiz() {
+            const aylar = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+            document.getElementById('takvim-ay-baslik').textContent = `${aylar[gosterilenAy]} ${gosterilenYil}`;
+
+            const tumu = talepleriGetir().filter(t => seciliPersonel === 'Tümü' || t.personel === seciliPersonel);
+            const ilkGun = new Date(gosterilenYil, gosterilenAy, 1).getDay();
+            const bosluk = ilkGun === 0 ? 6 : ilkGun - 1;
+            const gunSayisi = new Date(gosterilenYil, gosterilenAy + 1, 0).getDate();
+
+            let html = '';
+            for (let i = 0; i < bosluk; i++) html += '<div></div>';
+
+            for (let g = 1; g <= gunSayisi; g++) {
+                const tStr = `${gosterilenYil}-${String(gosterilenAy + 1).padStart(2, '0')}-${String(g).padStart(2, '0')}`;
+                const gunKayitlari = tumu.filter(t => t.tarih === tStr && t.durum !== 'İptal Edildi');
+                const onayliSayi = gunKayitlari.filter(t => t.durum === 'Onaylandı').length;
+                const bekleyenSayi = gunKayitlari.filter(t => t.durum === 'Bekliyor').length;
+                const seciliMi = tStr === seciliTarih;
+
+                html += `
+                <button onclick="gunSec('${tStr}')" class="p-2 rounded-xl border text-center transition flex flex-col items-center justify-between min-h-[54px] ${seciliMi ? 'bg-emerald-500/20 border-emerald-500 text-white' : 'bg-zinc-950 border-zinc-800/80 text-zinc-300 hover:border-zinc-700'}">
+                    <span class="text-xs font-extrabold">${g}</span>
+                    <div class="flex gap-1 mt-1">
+                        ${onayliSayi ? `<span class="text-[9px] font-extrabold bg-emerald-500 text-zinc-950 px-1.5 rounded-full">${onayliSayi}</span>` : ''}
+                        ${bekleyenSayi ? `<span class="text-[9px] font-extrabold bg-amber-400 text-zinc-950 px-1.5 rounded-full">${bekleyenSayi}</span>` : ''}
+                    </div>
+                </button>`;
+            }
+            document.getElementById('takvim-gunler').innerHTML = html;
+        }
+
+        function saatBazliAkisiCiz() {
+            const saatDilimleri = ["09:30", "11:00", "13:30", "15:00", "16:30", "18:00"];
+            const tumu = talepleriGetir().filter(t => t.tarih === seciliTarih && (seciliPersonel === 'Tümü' || t.personel === seciliPersonel));
+
+            document.getElementById('secili-gun-baslik').textContent = `${seciliTarih} • ${seciliPersonel === 'Tümü' ? 'Tüm Ekip' : seciliPersonel}`;
+            document.getElementById('gunluk-sayi-rozet').textContent = `${tumu.length} Randevu`;
+
+            document.getElementById('saat-bazli-akisi').innerHTML = saatDilimleri.map(saat => {
+                const kayitlar = tumu.filter(t => t.saat === saat);
+                if (kayitlar.length === 0) {
+                    return `
+                    <div class="flex items-center gap-3 bg-zinc-950/60 border border-zinc-800/60 rounded-xl px-4 py-2.5 text-xs">
+                        <span class="font-extrabold text-zinc-500 w-12">${saat}</span>
+                        <span class="text-zinc-600 italic">— Müsait Saat Dilimi —</span>
+                    </div>`;
+                }
+                return kayitlar.map(k => `
+                    <div class="print-card flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-zinc-950 border border-emerald-500/40 rounded-xl px-4 py-3 text-xs">
+                        <div class="flex items-center gap-3">
+                            <span class="font-extrabold text-emerald-400 w-12 text-sm">${k.saat}</span>
+                            <div>
+                                <div class="print-text-dark font-extrabold text-white">${k.ad} <span class="text-zinc-400 font-normal">(${k.gsm})</span></div>
+                                <div class="text-zinc-400 mt-0.5">${k.konu} • <strong class="text-zinc-200">${k.personel}</strong></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-bold px-2.5 py-0.5 rounded-full ${k.durum === 'Onaylandı' ? 'bg-emerald-500/15 text-emerald-400' : (k.durum === 'İptal Edildi' ? 'bg-rose-500/15 text-rose-400' : 'bg-amber-500/15 text-amber-300')}">${k.durum}</span>
+                            <button onclick="talepDurumDegistir(${k.id}, 'Onaylandı')" class="no-print bg-emerald-600 text-white px-2 py-1 rounded-lg font-bold">✓</button>
+                            <button onclick="talepDurumDegistir(${k.id}, 'İptal Edildi')" class="no-print bg-rose-600/30 text-rose-300 px-2 py-1 rounded-lg font-bold">✕</button>
+                        </div>
+                    </div>
+                `).join('');
+            }).join('');
+        }
+
+        function talepGonder(e) {
+            e.preventDefault();
+            const ad = document.getElementById('t-ad').value;
+            const gsm = document.getElementById('t-gsm').value;
+            const konu = document.getElementById('t-konu').value;
+            const personel = document.getElementById('t-personel').value;
+            const tarih = document.getElementById('t-tarih').value;
+            const saat = document.getElementById('t-saat').value;
+
+            const liste = talepleriGetir();
+            liste.unshift({ id: Date.now(), ad: ad, gsm: gsm, konu: konu, personel: personel, tarih: tarih, saat: saat, durum: "Bekliyor" });
+            seciliTarih = tarih;
+            talepleriKaydet(liste);
+
+            const kutu = document.getElementById('talep-sonuc');
+            kutu.classList.remove('hidden');
+            kutu.innerHTML = `✅ <strong>Sayın ${ad}</strong> (${gsm}), <strong>${tarih} ${saat}</strong> için <em>${personel}</em> adına kaydınız oluşturuldu! <button onclick="gorunumDegistir('isletme')" class="underline font-bold ml-2 text-emerald-400">Takvimde Gör & Onayla →</button>`;
+        }
+
+        function talepDurumDegistir(id, yeniDurum) {
+            const liste = talepleriGetir().map(t => t.id === id ? { ...t, durum: yeniDurum } : t);
+            talepleriKaydet(liste);
+        }
+
+        function tumAdminBilesenleriniCiz() {
+            const liste = talepleriGetir();
+            const bekleyen = liste.filter(t => t.durum === 'Bekliyor').length;
+            document.getElementById('panel-rozet').textContent = bekleyen;
+
+            takvimiCiz();
+            saatBazliAkisiCiz();
+
+            document.getElementById('admin-talep-listesi').innerHTML = liste.map(t => {
+                let rozet = 'bg-amber-500/15 text-amber-300 border-amber-500/30';
+                if (t.durum === 'Onaylandı') rozet = 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30';
+                if (t.durum === 'İptal Edildi') rozet = 'bg-rose-500/15 text-rose-300 border-rose-500/30';
+                const temizGsm = String(t.gsm).replace(/\D/g, '');
+                const wpLink = temizGsm ? `https://wa.me/90${temizGsm.replace(/^0/, '')}?text=${encodeURIComponent('Merhaba ' + t.ad + ', ' + t.tarih + ' saat ' + t.saat + ' tarihli ' + t.konu + ' randevunuz onaylanmıştır.')}` : '#';
+
+                return `
+                <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-3.5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="font-extrabold text-white text-sm">${t.ad}</span>
+                            <span class="text-xs text-emerald-400 font-semibold">${t.gsm}</span>
+                            <span class="text-[11px] font-bold border px-2 py-0.5 rounded-full ${rozet}">${t.durum}</span>
+                        </div>
+                        <div class="text-xs text-zinc-400 mt-1">${t.konu} • <strong class="text-zinc-200">${t.personel}</strong> • ${t.tarih} ${t.saat}</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 shrink-0">
+                        <button onclick="talepDurumDegistir(${t.id}, 'Onaylandı')" class="bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition">Onayla</button>
+                        <button onclick="talepDurumDegistir(${t.id}, 'İptal Edildi')" class="bg-rose-600/20 hover:bg-rose-600 text-rose-300 hover:text-white border border-rose-500/30 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition">İptal</button>
+                        <a href="${wpLink}" target="_blank" class="bg-zinc-800 hover:bg-zinc-700 text-emerald-400 text-[11px] font-bold px-2.5 py-1.5 rounded-lg transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+        tumAdminBilesenleriniCiz();
+        /* KODLAYAN_AJAN_OZEL_SCRIPT */
+    </script>
+</body>
+</html>
